@@ -1,0 +1,30 @@
+#content{
+    padding: 40px 20px 20px 20px;
+    max-height: calc(100vh - 4rem);
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+}
+
+#header{
+    display: flex;
+    border-bottom: 1px solid black;
+    h1{
+        flex-grow: 2;
+    }
+    #author-keywords{
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+
+    }
+}
+#date{
+    font-size: 15px;
+    color: rgba($color: #000000, $alpha: 0.7)
+}
+#speech-content{
+
+    margin-top: 20px;
+}

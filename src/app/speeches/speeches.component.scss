@@ -1,0 +1,12 @@
+#speeches{
+    max-height: calc(100vh - 4rem);
+}
+
+#sidebar{
+    position: absolute;
+    height: calc(100vh - 4rem);
+    width: 360px;
+}
+#content{
+    margin-left: 360px;
+}

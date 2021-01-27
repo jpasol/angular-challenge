@@ -1,0 +1,61 @@
+#menu{
+    font-family: "Podkova", Times, serif; ;
+    height: 4rem;
+    display: flex;
+    width: inherit;
+    font-size: 40px;
+}
+
+#logo{
+    width: 240px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    text-decoration: none;
+    color: black;
+}
+
+#profile {
+    width: 480px;
+    right: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    #greeting::after{
+        padding-right: 20px;
+        font-size: 40px;
+        content: "Hello, Mark";
+    }
+    #profile-icon{
+        display: flex;
+        align-items: center;
+        width: 80px;
+        
+        svg{
+            background-color: white;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+    }
+}
+
+nav{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+
+    a {
+        margin-right: 40px;
+        text-decoration: none;
+        color: black;
+    }
+    a:hover{
+        color :white;
+        transition: .2s;
+    }
+}
