@@ -6,6 +6,8 @@
     align-items: center;
     padding-left: 20px;
 
+    border: 1px solid rgba($color: #000000, $alpha: 0.1);
+
     #active-icon{
         width: 40px;
         margin-left: auto;
@@ -16,5 +18,5 @@
 
 .shadow{
     background: #FFFFFF;
-    box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
 }

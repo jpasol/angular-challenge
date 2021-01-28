@@ -21,6 +21,18 @@
         height: 80px;
         margin-top: auto;
         background: rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+        #delete-icon{
+            margin-left: auto;
+            width: 80px;
+            display: flex;
+            svg{
+                height: 30px;
+                width: 30px;
+                margin: auto;
+            }
+        }
     }
 
     input{
