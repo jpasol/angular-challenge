@@ -34,16 +34,32 @@
         word-wrap: break-word;       /* Internet Explorer 5.5+ */
     }
 }
-
-#edit-icon{
-    position:absolute;
-    right: 80px;
+#edit-div{
+    position: absolute;
+    right: 40px;
     bottom: 40px;
-    background: rgba($color: #000000, $alpha: .1);
-    border-radius: 50%;
-    width: 80px;
     height: 80px;
+    width: 200px;
     display: flex;
+    justify-content: space-between;
+    #edit-icon{
+        background: rgba($color: #000000, $alpha: .1);
+        margin-left: auto;
+    }
+    #cancel-icon{
+        background: rgba($color: grey, $alpha: 1.0);
+    }
+    
+    #save-icon{
+        background: rgba($color: green, $alpha: 1.0);
+    }
+}
+
+.icon {
+    border-radius: 50%;
+    display: flex;
+    height: inherit;
+    width: 80px;
     svg{
         width: 40px;
         height: 40px;
