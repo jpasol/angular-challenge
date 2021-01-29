@@ -15,4 +15,10 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  deleteSpeech(){
+    delete this.shit[0];
+    this.shit = this.shit.filter(x => {return x != null})
+    console.log(this.shit)
+  }
+
 }
