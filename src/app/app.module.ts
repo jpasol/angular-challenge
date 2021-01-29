@@ -23,8 +23,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    CommonModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
