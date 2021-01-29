@@ -55,6 +55,12 @@
     }
 }
 
+.inputEditMode:disabled{
+    background: white;
+    border: 0;
+    color: inherit;
+}
+
 .icon {
     border-radius: 50%;
     display: flex;
