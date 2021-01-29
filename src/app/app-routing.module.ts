@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { pathToFileURL } from 'url';
 import { ContentComponent } from './content/content.component';
+import { ModalMessageComponent } from './modal-message/modal-message.component';
 import { SpeechesComponent } from './speeches/speeches.component';
 
 const routes: Routes = [
+  {path: 'dev', component: ModalMessageComponent},
   {path:'speeches', component: SpeechesComponent, children:[
     {path:'',component: ContentComponent, outlet:"content"}
   ]},
