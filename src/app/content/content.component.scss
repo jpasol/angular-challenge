@@ -8,8 +8,10 @@
 #header{
     display: flex;
     border-bottom: 1px solid black;
-    h1{
+    #title{
         flex-grow: 2;
+        font-size: 40px;
+        font-weight: 400;
     }
     #author-keywords{
         margin-left: auto;
