@@ -10,6 +10,8 @@ import { SpeechesComponent } from './speeches/speeches.component';
 import { SpeechItemComponent } from './speech-item/speech-item.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { DeletePromptComponent } from './delete-prompt/delete-prompt.component';
+import { ModalMessageComponent } from './modal-message/modal-message.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { CommonModule } from '@angular/common';
     SidebarComponent,
     ContentComponent,
     SpeechesComponent,
-    SpeechItemComponent
+    SpeechItemComponent,
+    ModalMessageComponent
   ],
   imports: [
     BrowserModule,
