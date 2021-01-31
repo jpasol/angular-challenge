@@ -10,6 +10,7 @@ import { SpeechesComponent } from './speeches/speeches.component';
 import { SpeechItemComponent } from './speech-item/speech-item.component';
 import { FormsModule } from '@angular/forms';
 import { ModalMessageComponent } from './modal-message/modal-message.component';
+import { SpeechesService } from './speeches.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { ModalMessageComponent } from './modal-message/modal-message.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [SpeechesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
