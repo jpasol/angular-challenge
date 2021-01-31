@@ -7,8 +7,6 @@ import { Component, ElementRef, Input, OnInit, QueryList, ViewChild, ViewChildre
 })
 export class ContentComponent implements OnInit {
 
-  @ViewChild('title') title: ElementRef
-  @ViewChild('content') content: ElementRef
   constructor() { }
   isEditMode: boolean;
 
