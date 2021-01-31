@@ -4,17 +4,17 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-interface speech{
-  id: number;
-  title: string;
-  author: string;
-  keywords: string[],
-  modified: Date;
-  content: string;
-}
+// export interface speech{
+//   id: number;
+//   title: string;
+//   author: string;
+//   keywords: string[],
+//   modified: Date;
+//   content: string;
+// };
 export class SpeechesService {
 
-  speeches: speech[] = [
+  speeches: any[] = [
   {id: 1,
     title:'Speech# 1',
   author: 'James Bond',
@@ -34,7 +34,7 @@ export class SpeechesService {
     modified: new Date(),
     content: 'real'}]
 
-  speechSubject: BehaviorSubject<speech[]> = new BehaviorSubject(this.speeches)
+  speechSubject: BehaviorSubject<any[]> = new BehaviorSubject(this.speeches)
   constructor() { }
   
   public get Speeches(){
