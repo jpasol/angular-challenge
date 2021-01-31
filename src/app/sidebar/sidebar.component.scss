@@ -40,6 +40,9 @@
     }
     label{
         cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .item{
         height: 40px;
