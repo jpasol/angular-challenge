@@ -27,7 +27,7 @@ import { ModalMessageComponent } from './modal-message/modal-message.component';
     FormsModule,
     BrowserAnimationsModule
   ],
-  providers: [SpeechesService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
