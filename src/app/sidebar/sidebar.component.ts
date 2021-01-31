@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SpeechesService } from '../speeches.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,10 +10,14 @@ export class SidebarComponent implements OnInit {
 
   speeches: any[] = [];
   selected: any;
-  constructor() { }
   @Input() choice: any;
   
+  constructor(private speechService: SpeechesService) { }
+  
   ngOnInit(): void {
+    this.speechService.Speeches.subscribe(x => {
+      this.speeches = x
+    })
   }
 
   deleteSpeech(){
