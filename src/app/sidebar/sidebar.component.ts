@@ -20,10 +20,11 @@ export class SidebarComponent implements OnInit {
     })
   }
 
-  deleteSpeech(){
-    delete this.shit[0];
-    this.shit = this.shit.filter(x => {return x != null})
-    console.log(this.shit)
+  deleteSpeech(speech:any){
+    if(window.confirm('Are you sure you want to delete this?')){
+      this.speechService.deleteSpeech(speech)
+    }
   }
+
 
 }
