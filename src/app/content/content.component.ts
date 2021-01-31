@@ -13,8 +13,6 @@ export class ContentComponent implements OnInit {
   
   public set editMode(v : boolean) {
     this.isEditMode = v;
-    this.title.nativeElement.disabled = !v
-    this.content.nativeElement.contenteditable = v
   }
   
   
