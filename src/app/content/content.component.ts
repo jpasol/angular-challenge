@@ -1,9 +1,27 @@
-import { Component, ElementRef, Input, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { animate, keyframes, query, stagger, state, style, transition, trigger } from '@angular/animations';
+import { Component, ElementRef, Input, OnInit, Optional, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { By } from 'protractor';
+import { AppModule } from '../app.module';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.scss']
+  styleUrls: ['./content.component.scss'],
+  animations:[
+    trigger('InOut',[
+      transition(':enter',[
+        style([]) //force no aimations at start
+      ]),
+      transition('editOff => editOn',[
+        query('.icon',[
+          animate('.5s', keyframes([
+            style({transform: 'rotate(0deg)'}),
+            style({transform: 'rotate(180deg)'})
+          ]))
+        ])
+      ])
+    ])
+  ]
 })
 export class ContentComponent implements OnInit {
 
