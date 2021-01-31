@@ -8,7 +8,7 @@ import { Component, ElementRef, Input, OnInit, QueryList, ViewChild, ViewChildre
 export class ContentComponent implements OnInit {
 
   constructor() { }
-  isEditMode: boolean;
+  isEditMode: boolean = false;
 
   
   public set editMode(v : boolean) {
