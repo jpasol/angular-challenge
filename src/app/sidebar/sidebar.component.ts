@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  shit: number[] = [1,2,3];
+  speeches: any[] = [];
   selected: any;
   constructor() { }
   @Input() choice: any;

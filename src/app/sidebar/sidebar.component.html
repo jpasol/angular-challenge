@@ -1,9 +1,9 @@
 <div id="sidebar">
     <span>Speeches</span>
     <div id="speech-container">
-        <label *ngFor="let choice of shit; index as i" [for]="'radioj' + i">
-            <input type="radio" [value]="choice" [name]="radio" [id]="'radio' + i" [(ngModel)]="ngModel" (ngModelChange)="selected = $event">
-            <app-speech-item class="item" [active]="choice == selected" [speechName]="'Magical Shit'"></app-speech-item>
+        <label *ngFor="let speech of speeches; index as i" [for]="'radio' + i">
+            <input type="radio" [value]="speech" name="radio" [id]="'radio' + i" [(ngModel)]="ngModel" (ngModelChange)="selected = $event">
+            <app-speech-item class="item" [active]="speech == selected" [speechName]="speech.title"></app-speech-item>
         </label>
         <div id="speech-menu">
             <button id="delete-icon" (click)="deleteSpeech()">
