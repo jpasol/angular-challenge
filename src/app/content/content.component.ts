@@ -43,8 +43,8 @@ export class ContentComponent implements OnInit {
   
   Phasellus condimentum, mauris a interdum consectetur, lorem lectus semper nibh, a consectetur dolor dui eu turpis. In sit amet ipsum molestie, posuere arcu vitae, dignissim tortor. Curabitur euismod sagittis congue. Proin laoreet est at efficitur bibendum. Duis eleifend a nulla mattis ornare. Donec pellentesque, justo in semper elementum, justo enim imperdiet dolor, eu pretium mauris arcu quis quam. Pellentesque nec metus a purus convallis vehicula vitae quis nisi. Duis ut lacinia dui. Donec sed augue tempor, tempor purus vel, molestie felis. Donec consequat, risus eu suscipit pulvinar, augue lacus rhoncus augue, non feugiat dolor risus eu erat. Nam sed dui ac purus sagittis ultrices nec et purus. Proin sit amet mollis mi. Nulla egestas semper enim non iaculis. Nullam ultrices ut justo quis faucibus. Aliquam sollicitudin risus sed pharetra facilisis.`;
 
-  
-  public set editMode(v : boolean) {
+  speech;
+  set editMode(v : boolean) {
     this.isEditMode = v;
   }
   
