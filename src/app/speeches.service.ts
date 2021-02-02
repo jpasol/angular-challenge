@@ -36,6 +36,8 @@ export class SpeechesService {
 
   speechSubject: BehaviorSubject<any[]> = new BehaviorSubject(this.speeches)
   constructor() { }
+
+  private idCounter = 3; //just for mocking data, controls id 
   
   public get Speeches(){
     return this.speechSubject.asObservable();
@@ -46,4 +48,26 @@ export class SpeechesService {
     this.speeches = this.speeches.filter(x => {return x != null})
     this.speechSubject.next(this.speeches)
   }
+
+  public createSpeech(){
+    this.idCounter++ //just for mocking data
+    this.speeches.push({
+      id: this.idCounter,
+      title:'Untitled',
+      author: '',
+      keywords:[],
+      modified: new Date(),
+      content: ''
+    })
+  }
+
+  public getSpeech(id){
+    return this.speeches.find(x => x.id == id);
+  }
+
+  public saveSpeech(speech){
+    this.speeches[this.speeches.findIndex(x => x.id == speech.id)] = speech
+  }
+
+  
 }
