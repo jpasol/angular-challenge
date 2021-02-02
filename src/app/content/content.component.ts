@@ -28,7 +28,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: ActivatedRoute,
+  private speechService: SpeechesService) { }
   isEditMode: boolean = false;
   keywords = ['Angular','AngularJS'];
   sampleContent = 
@@ -54,5 +55,14 @@ export class ContentComponent implements OnInit {
   private toggleEditableText(){
     this.editMode = !this.isEditMode
   }
+
+  private saveSpeech(){
+    this.speechService.saveSpeech(this.speech);
+    console.log(this.speech, this.speechService.getSpeech(this.speech.id))
+    this.toggleEditableText();
+  }
+
+  
+
 
 }
