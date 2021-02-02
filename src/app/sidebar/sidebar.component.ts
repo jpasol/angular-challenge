@@ -26,5 +26,9 @@ export class SidebarComponent implements OnInit {
     }
   }
 
+  createSpeech(){
+    this.speechService.createSpeech();
+  }
+
 
 }
