@@ -1,5 +1,7 @@
 import { animate, keyframes, query, stagger, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { SpeechesService } from '../speeches.service';
 
 @Component({
   selector: 'app-content',
@@ -50,6 +52,7 @@ export class ContentComponent implements OnInit {
   
   
   ngOnInit(): void {
+    this.router.params.subscribe(x => this.speech = this.speechService.getSpeech(x['id']))
   }
 
   private toggleEditableText(){
