@@ -8,7 +8,7 @@
     <div id="speech-container">
         <label *ngFor="let speech of speeches; index as i" [for]="'radio' + i">
             <input type="radio" [value]="speech" name="radio" [id]="'radio' + i" [(ngModel)]="ngModel" (ngModelChange)="selected = $event">
-            <app-speech-item class="item" [active]="speech == selected" [speechName]="speech.title"></app-speech-item>
+            <app-speech-item [routerLink]="[{outlets:{content:[speech.id]}}]" class="item" [active]="speech == selected" [speechName]="speech.title"></app-speech-item>
         </label>
         <div id="speech-menu">
             <button id="delete-icon" (click)="deleteSpeech(this.selected)">
