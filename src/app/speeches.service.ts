@@ -17,19 +17,31 @@ export class SpeechesService {
   speeches: any[] = [
   {id: 1,
     title:'Speech# 1',
-  author: 'James Bond',
+    author: {
+      username: 'James007',
+      firstname: 'James',
+      lastname: 'Bond'
+    },
   keywords:['Angular', 'AngularJS'],
   modified: new Date(),
   content: 'shit'},
   {id: 2,
     title:'Speech# 2',
-    author: 'Arthur',
+    author: {
+      username: 'mcArthur',
+      firstname: 'Arthur',
+      lastname: 'Marks'
+    },
     keywords:['Angular', 'AngularJS'],
     modified: new Date(),
     content: 'is'},
   {id:3 ,
     title:'Speech# 3',
-    author: 'James Bond',
+    author: {
+      username: 'DukeWorth',
+      firstname: 'Lucas',
+      lastname: 'Setti'
+    },
     keywords:['Jasmine', 'Protractor'],
     modified: new Date(),
     content: 'real'}]
