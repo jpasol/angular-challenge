@@ -3,7 +3,7 @@
         <h1 id="title" #title [contentEditable]='isEditMode' >{{speech.title}}</h1>
         <!-- <input id="title" #title type="text" class="inputEditMode" disabled value="Speech #1"> -->
         <div id="author-keywords" >
-            <span id="author">by: James Bond</span>
+            <span id="author">by: {{speech.author.firstname}} {{speech.author.lastname}}</span>
             <span id="keywords" #keywords [contentEditable]='isEditMode'>{{speech.keywords}} </span>
         </div>
     </div>

@@ -2,6 +2,7 @@ import { animate, keyframes, query, stagger, state, style, transition, trigger }
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SpeechesService } from '../speeches.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-content',
@@ -35,10 +36,13 @@ export class ContentComponent implements OnInit {
   @ViewChild('content') content: ElementRef;
 
   constructor(private router: ActivatedRoute,
-  private speechService: SpeechesService) { }
+  private speechService: SpeechesService,
+  private userService: UserService) { }
   isEditMode: boolean = false;
 
   speech;
+  user;
+
   set editMode(v : boolean) {
     this.isEditMode = v;
   }
@@ -46,6 +50,7 @@ export class ContentComponent implements OnInit {
   
   ngOnInit(): void {
     this.router.params.subscribe(x => this.speech = this.speechService.getSpeech(x['id']))
+    this.userService.currentUser.subscribe(x => this.user = x)
   }
 
   private toggleEditableText(){
@@ -57,8 +62,9 @@ export class ContentComponent implements OnInit {
     this.speech.keywords = this.keywords.nativeElement.innerText;
     this.speech.content = this.content.nativeElement.innerText;
 
+    this.speech.author = this.user;
+
     this.speechService.saveSpeech(this.speech);
-    console.log(this.speech, this.speechService.getSpeech(this.speech.id))
     this.toggleEditableText();
   }
 
