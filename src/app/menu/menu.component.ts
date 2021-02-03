@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('profile') profile : ElementRef;
+  constructor(private userService: UserService) { }
 
+  user;
   ngOnInit(): void {
+    this.userService.currentUser.subscribe(x => this.user = x)
   }
 
 }
