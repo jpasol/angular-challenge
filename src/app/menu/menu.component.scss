@@ -15,7 +15,13 @@
     text-decoration: none;
     color: black;
 }
-
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
 #profile {
     width: 480px;
     right: 0;
