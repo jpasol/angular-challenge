@@ -54,6 +54,14 @@ export class ContentComponent implements OnInit {
     this.toggleEditableText();
   }
 
+  private cancelEdit(){
+    this.title.nativeElement.innerText = this.speech.title;
+    this.keywords.nativeElement.innerText = this.speech.keywords;
+    this.content.nativeElement.innerText = this.speech.content;
+
+    this.toggleEditableText();
+  }
+
   
 
 
