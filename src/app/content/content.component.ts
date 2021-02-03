@@ -1,5 +1,5 @@
 import { animate, keyframes, query, stagger, state, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SpeechesService } from '../speeches.service';
 
@@ -30,6 +30,10 @@ import { SpeechesService } from '../speeches.service';
 })
 export class ContentComponent implements OnInit {
 
+  @ViewChild('title') title: ElementRef;
+  @ViewChild('keywords') keywords: ElementRef;
+  @ViewChild('content') content: ElementRef;
+
   constructor(private router: ActivatedRoute,
   private speechService: SpeechesService) { }
   isEditMode: boolean = false;
@@ -49,6 +53,10 @@ export class ContentComponent implements OnInit {
   }
 
   private saveSpeech(){
+    this.speech.title = this.title.nativeElement.innerText;
+    this.speech.keywords = this.keywords.nativeElement.innerText;
+    this.speech.content = this.content.nativeElement.innerText;
+
     this.speechService.saveSpeech(this.speech);
     console.log(this.speech, this.speechService.getSpeech(this.speech.id))
     this.toggleEditableText();
