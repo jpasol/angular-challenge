@@ -1,15 +1,15 @@
 <div id="content" *ngIf="speech">
     <div id="header">
-        <h1 id="title" [contentEditable]='isEditMode' >{{speech.title}}</h1>
+        <h1 id="title" #title [contentEditable]='isEditMode' >{{speech.title}}</h1>
         <!-- <input id="title" #title type="text" class="inputEditMode" disabled value="Speech #1"> -->
         <div id="author-keywords" >
             <span id="author">by: James Bond</span>
-            <span id="keywords" [contentEditable]='isEditMode'>{{speech.keywords}} </span>
+            <span id="keywords" #keywords [contentEditable]='isEditMode'>{{speech.keywords}} </span>
         </div>
     </div>
     <span id="date">Modified: Shit</span>
     <div id="speech-content">
-        <pre [contentEditable]='isEditMode'>{{speech.content}}</pre>
+        <pre #content [contentEditable]='isEditMode'>{{speech.content}}</pre>
     </div>
     <!-- <div id="edit-div" [@InOut]="isEditMode? 'editOn' : 'editOff'"> -->
         <div id="edit-div">
